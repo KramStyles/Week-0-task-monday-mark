@@ -5,17 +5,16 @@ def inverted_triangle(number):
     return: triangles(str) - A string of triangles
     """
 
-    triangles = "" # sets an empty variable to return statements
 
     if type(number) == int:
         # Making sure number is an integer
-        for x in range(number, 0, -2):
-            # 
-            triangles += " * " * x + "\n"
+        multiplier = (number - 1) * 2
+        for x in range(multiplier, 0, -2):
+            print((" * " * x)[:-2] + "\n")
     else:
-        triangles = "Input must be a valid number"
-
-    return triangles
+        print("Input must be a valid number")
 
 
-print(inverted_triangle(6))
+
+inverted_triangle(6)
+print("abcde"[:-1])
